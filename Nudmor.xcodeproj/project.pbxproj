@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C66108811D61A22F00F6DB6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108801D61A22F00F6DB6E /* main.m */; };
+		C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108831D61A22F00F6DB6E /* AppDelegate.m */; };
+		C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108861D61A22F00F6DB6E /* FeedViewController.m */; };
+		C661088A1D61A22F00F6DB6E /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108891D61A22F00F6DB6E /* AppointmentViewController.m */; };
+		C661088D1D61A22F00F6DB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C661088B1D61A22F00F6DB6E /* Main.storyboard */; };
+		C661088F1D61A22F00F6DB6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C661088E1D61A22F00F6DB6E /* Assets.xcassets */; };
+		C66108921D61A22F00F6DB6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66108901D61A22F00F6DB6E /* LaunchScreen.storyboard */; };
+		C661089B1D61BBAD00F6DB6E /* SymptomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C661089A1D61BBAD00F6DB6E /* SymptomViewController.m */; };
+		C661089E1D629DE600F6DB6E /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C661089D1D629DE600F6DB6E /* LocationViewController.m */; };
+		C66108A11D62A1B400F6DB6E /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108A01D62A1B400F6DB6E /* SearchResultViewController.m */; };
+		C66108A31D62A2FC00F6DB6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66108A21D62A2FC00F6DB6E /* MapKit.framework */; };
+		C66108CC1D67F79100F6DB6E /* HospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108CB1D67F79100F6DB6E /* HospitalViewController.m */; };
+		C66108CF1D69894C00F6DB6E /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108CE1D69894C00F6DB6E /* SummaryViewController.m */; };
+		C66108D21D699B6C00F6DB6E /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108D11D699B6C00F6DB6E /* RootTabBarController.m */; };
+		C66108DD1D69EBC500F6DB6E /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DC1D69EBC500F6DB6E /* Appointment.m */; };
+		C66108E01D69ED1A00F6DB6E /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C661087C1D61A22F00F6DB6E /* Nudmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66108801D61A22F00F6DB6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C66108821D61A22F00F6DB6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C66108831D61A22F00F6DB6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C66108851D61A22F00F6DB6E /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		C66108861D61A22F00F6DB6E /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		C66108881D61A22F00F6DB6E /* AppointmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppointmentViewController.h; sourceTree = "<group>"; };
+		C66108891D61A22F00F6DB6E /* AppointmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppointmentViewController.m; sourceTree = "<group>"; };
+		C661088C1D61A22F00F6DB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C661088E1D61A22F00F6DB6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C66108911D61A22F00F6DB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C66108931D61A22F00F6DB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66108991D61BBAD00F6DB6E /* SymptomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymptomViewController.h; sourceTree = "<group>"; };
+		C661089A1D61BBAD00F6DB6E /* SymptomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymptomViewController.m; sourceTree = "<group>"; };
+		C661089C1D629DE600F6DB6E /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		C661089D1D629DE600F6DB6E /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		C661089F1D62A1B400F6DB6E /* SearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
+		C66108A01D62A1B400F6DB6E /* SearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
+		C66108A21D62A2FC00F6DB6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C66108CA1D67F79100F6DB6E /* HospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalViewController.h; sourceTree = "<group>"; };
+		C66108CB1D67F79100F6DB6E /* HospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalViewController.m; sourceTree = "<group>"; };
+		C66108CD1D69894C00F6DB6E /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		C66108CE1D69894C00F6DB6E /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		C66108D01D699B6C00F6DB6E /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		C66108D11D699B6C00F6DB6E /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		C66108DB1D69EBC500F6DB6E /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appointment.h; sourceTree = "<group>"; };
+		C66108DC1D69EBC500F6DB6E /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appointment.m; sourceTree = "<group>"; };
+		C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentCell.h; sourceTree = "<group>"; };
+		C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C66108791D61A22F00F6DB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66108A31D62A2FC00F6DB6E /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C66108731D61A22F00F6DB6E = {
+			isa = PBXGroup;
+			children = (
+				C66108A21D62A2FC00F6DB6E /* MapKit.framework */,
+				C661087E1D61A22F00F6DB6E /* Nudmor */,
+				C661087D1D61A22F00F6DB6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C661087D1D61A22F00F6DB6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C661087C1D61A22F00F6DB6E /* Nudmor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C661087E1D61A22F00F6DB6E /* Nudmor */ = {
+			isa = PBXGroup;
+			children = (
+				C66108821D61A22F00F6DB6E /* AppDelegate.h */,
+				C66108831D61A22F00F6DB6E /* AppDelegate.m */,
+				C66108851D61A22F00F6DB6E /* FeedViewController.h */,
+				C66108861D61A22F00F6DB6E /* FeedViewController.m */,
+				C66108881D61A22F00F6DB6E /* AppointmentViewController.h */,
+				C66108891D61A22F00F6DB6E /* AppointmentViewController.m */,
+				C661088B1D61A22F00F6DB6E /* Main.storyboard */,
+				C66108D01D699B6C00F6DB6E /* RootTabBarController.h */,
+				C66108D11D699B6C00F6DB6E /* RootTabBarController.m */,
+				C66108CA1D67F79100F6DB6E /* HospitalViewController.h */,
+				C66108CB1D67F79100F6DB6E /* HospitalViewController.m */,
+				C661089F1D62A1B400F6DB6E /* SearchResultViewController.h */,
+				C66108A01D62A1B400F6DB6E /* SearchResultViewController.m */,
+				C661088E1D61A22F00F6DB6E /* Assets.xcassets */,
+				C66108901D61A22F00F6DB6E /* LaunchScreen.storyboard */,
+				C66108931D61A22F00F6DB6E /* Info.plist */,
+				C661087F1D61A22F00F6DB6E /* Supporting Files */,
+				C66108991D61BBAD00F6DB6E /* SymptomViewController.h */,
+				C661089A1D61BBAD00F6DB6E /* SymptomViewController.m */,
+				C661089C1D629DE600F6DB6E /* LocationViewController.h */,
+				C661089D1D629DE600F6DB6E /* LocationViewController.m */,
+				C66108CD1D69894C00F6DB6E /* SummaryViewController.h */,
+				C66108CE1D69894C00F6DB6E /* SummaryViewController.m */,
+				C66108DB1D69EBC500F6DB6E /* Appointment.h */,
+				C66108DC1D69EBC500F6DB6E /* Appointment.m */,
+				C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */,
+				C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */,
+			);
+			path = Nudmor;
+			sourceTree = "<group>";
+		};
+		C661087F1D61A22F00F6DB6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C66108801D61A22F00F6DB6E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C661087B1D61A22F00F6DB6E /* Nudmor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66108961D61A22F00F6DB6E /* Build configuration list for PBXNativeTarget "Nudmor" */;
+			buildPhases = (
+				C66108781D61A22F00F6DB6E /* Sources */,
+				C66108791D61A22F00F6DB6E /* Frameworks */,
+				C661087A1D61A22F00F6DB6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nudmor;
+			productName = Nudmor;
+			productReference = C661087C1D61A22F00F6DB6E /* Nudmor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C66108741D61A22F00F6DB6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nudmor Foundation";
+				TargetAttributes = {
+					C661087B1D61A22F00F6DB6E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9S98L4MM4M;
+					};
+				};
+			};
+			buildConfigurationList = C66108771D61A22F00F6DB6E /* Build configuration list for PBXProject "Nudmor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C66108731D61A22F00F6DB6E;
+			productRefGroup = C661087D1D61A22F00F6DB6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C661087B1D61A22F00F6DB6E /* Nudmor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C661087A1D61A22F00F6DB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66108921D61A22F00F6DB6E /* LaunchScreen.storyboard in Resources */,
+				C661088F1D61A22F00F6DB6E /* Assets.xcassets in Resources */,
+				C661088D1D61A22F00F6DB6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C66108781D61A22F00F6DB6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C661089B1D61BBAD00F6DB6E /* SymptomViewController.m in Sources */,
+				C66108DD1D69EBC500F6DB6E /* Appointment.m in Sources */,
+				C66108D21D699B6C00F6DB6E /* RootTabBarController.m in Sources */,
+				C66108E01D69ED1A00F6DB6E /* AppointmentCell.m in Sources */,
+				C661089E1D629DE600F6DB6E /* LocationViewController.m in Sources */,
+				C66108CF1D69894C00F6DB6E /* SummaryViewController.m in Sources */,
+				C661088A1D61A22F00F6DB6E /* AppointmentViewController.m in Sources */,
+				C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */,
+				C66108A11D62A1B400F6DB6E /* SearchResultViewController.m in Sources */,
+				C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */,
+				C66108CC1D67F79100F6DB6E /* HospitalViewController.m in Sources */,
+				C66108811D61A22F00F6DB6E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C661088B1D61A22F00F6DB6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C661088C1D61A22F00F6DB6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C66108901D61A22F00F6DB6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C66108911D61A22F00F6DB6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C66108941D61A22F00F6DB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C66108951D61A22F00F6DB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C66108971D61A22F00F6DB6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Nudmor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.nudmor.app.Nudmor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		C66108981D61A22F00F6DB6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Nudmor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.nudmor.app.Nudmor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C66108771D61A22F00F6DB6E /* Build configuration list for PBXProject "Nudmor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66108941D61A22F00F6DB6E /* Debug */,
+				C66108951D61A22F00F6DB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66108961D61A22F00F6DB6E /* Build configuration list for PBXNativeTarget "Nudmor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66108971D61A22F00F6DB6E /* Debug */,
+				C66108981D61A22F00F6DB6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C66108741D61A22F00F6DB6E /* Project object */;
+}
