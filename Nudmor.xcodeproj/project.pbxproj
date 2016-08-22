@@ -24,6 +24,7 @@
 		C66108DD1D69EBC500F6DB6E /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DC1D69EBC500F6DB6E /* Appointment.m */; };
 		C66108E01D69ED1A00F6DB6E /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */; };
 		C66108E31D6AC4F300F6DB6E /* AppointmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */; };
+		C66108E51D6B39B900F6DB6E /* 01-progress.gif in Resources */ = {isa = PBXBuildFile; fileRef = C66108E41D6B39B900F6DB6E /* 01-progress.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
 		C66108E11D6AC4F300F6DB6E /* AppointmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentManager.h; sourceTree = "<group>"; };
 		C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentManager.m; sourceTree = "<group>"; };
+		C66108E41D6B39B900F6DB6E /* 01-progress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "01-progress.gif"; path = "../../../../Pictures/saved/01-progress.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		C661087E1D61A22F00F6DB6E /* Nudmor */ = {
 			isa = PBXGroup;
 			children = (
+				C66108E41D6B39B900F6DB6E /* 01-progress.gif */,
 				C66108821D61A22F00F6DB6E /* AppDelegate.h */,
 				C66108831D61A22F00F6DB6E /* AppDelegate.m */,
 				C66108851D61A22F00F6DB6E /* FeedViewController.h */,
@@ -193,6 +196,7 @@
 			files = (
 				C66108921D61A22F00F6DB6E /* LaunchScreen.storyboard in Resources */,
 				C661088F1D61A22F00F6DB6E /* Assets.xcassets in Resources */,
+				C66108E51D6B39B900F6DB6E /* 01-progress.gif in Resources */,
 				C661088D1D61A22F00F6DB6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

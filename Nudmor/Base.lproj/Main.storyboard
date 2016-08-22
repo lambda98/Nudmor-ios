@@ -367,6 +367,9 @@
                                 <rect key="frame" x="23" y="441" width="329" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Continue as Passapong Thaithatgoon"/>
+                                <connections>
+                                    <segue destination="cSH-ah-lmi" kind="show" id="hE6-49-SWM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -499,6 +502,7 @@
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhe-Ko-PPA">
                                 <rect key="frame" x="139" y="402" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Book"/>
                                 <connections>
                                     <action selector="makeBooking:" destination="FmI-D2-NSd" eventType="touchUpInside" id="hk6-sC-8tQ"/>
@@ -576,4 +580,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wIa-vf-UjY"/>
+    </inferredMetricsTieBreakers>
 </document>

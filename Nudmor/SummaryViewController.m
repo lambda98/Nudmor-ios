@@ -26,6 +26,15 @@
 }
 - (IBAction)confirmBooking:(id)sender {
     
+    
+    
+    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [overlay setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
+    
+    [self.navigationController.view addSubview:overlay];
+    
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0, false);
+    
     AppointmentManager *manager = [AppointmentManager sharedManager];
     manager.appointments = [NSArray arrayWithObjects:@"book", nil];
     
