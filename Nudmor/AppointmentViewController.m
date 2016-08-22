@@ -8,6 +8,7 @@
 
 #import "AppointmentViewController.h"
 #import "AppointmentCell.h"
+#import "AppointmentManager.h"
 
 @interface AppointmentViewController ()
 
@@ -29,10 +30,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    appointments = manager.appointments;
+    
     if(appointments == nil)
     {
-        //[self.appointmentTable setHidden:YES];
-        [self.emptyAppointmentLabel setHidden:YES];
+        [self.appointmentTable setHidden:YES];
     }
     else
     {
@@ -44,7 +47,7 @@
     
     if(appointments == nil)
     {
-        return 1;
+        return 0;
     }
     else
     {
@@ -61,6 +64,11 @@
     cell.timeLabel.text = @"11.00";
     
     return cell;
+}
+
+- (void)addAppointment
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

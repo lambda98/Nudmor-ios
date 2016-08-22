@@ -7,6 +7,7 @@
 //
 
 #import "SummaryViewController.h"
+#import "AppointmentManager.h"
 
 @interface SummaryViewController ()
 
@@ -24,6 +25,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)confirmBooking:(id)sender {
+    
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    manager.appointments = [NSArray arrayWithObjects:@"book", nil];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //UIViewController *appointmentViewController = [storyboard instantiateViewControllerWithIdentifier:@"AppointmentView"];
     

@@ -7,6 +7,7 @@
 //
 
 #import "RootTabBarController.h"
+#import "AppointmentViewController.h"
 
 @interface RootTabBarController ()
 

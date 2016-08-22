@@ -23,6 +23,7 @@
 		C66108D21D699B6C00F6DB6E /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108D11D699B6C00F6DB6E /* RootTabBarController.m */; };
 		C66108DD1D69EBC500F6DB6E /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DC1D69EBC500F6DB6E /* Appointment.m */; };
 		C66108E01D69ED1A00F6DB6E /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */; };
+		C66108E31D6AC4F300F6DB6E /* AppointmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		C66108DC1D69EBC500F6DB6E /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appointment.m; sourceTree = "<group>"; };
 		C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentCell.h; sourceTree = "<group>"; };
 		C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
+		C66108E11D6AC4F300F6DB6E /* AppointmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentManager.h; sourceTree = "<group>"; };
+		C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				C66108DC1D69EBC500F6DB6E /* Appointment.m */,
 				C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */,
 				C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */,
+				C66108E11D6AC4F300F6DB6E /* AppointmentManager.h */,
+				C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */,
 			);
 			path = Nudmor;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				C66108CF1D69894C00F6DB6E /* SummaryViewController.m in Sources */,
 				C661088A1D61A22F00F6DB6E /* AppointmentViewController.m in Sources */,
 				C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */,
+				C66108E31D6AC4F300F6DB6E /* AppointmentManager.m in Sources */,
 				C66108A11D62A1B400F6DB6E /* SearchResultViewController.m in Sources */,
 				C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */,
 				C66108CC1D67F79100F6DB6E /* HospitalViewController.m in Sources */,
