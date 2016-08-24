@@ -14,7 +14,7 @@
 
 @implementation SymptomViewController
 {
-    NSArray *items;
+    NSMutableArray *items;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -25,7 +25,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    items = [NSArray arrayWithObjects:@"Common Symptoms", @"Headache", @"Common cold", @"Sore throat", @"Fever", @"Cough", @"Dizziness", @"Diarrhea", @"Chest pain", @"Earache", @"Skin rashes", @"Hip pain", @"Knee pain", @"Low back pain", @"Neck pain", nil];
+    //items = [NSArray arrayWithObjects:@"Common Symptoms", @"Headache", @"Common cold", @"Sore throat", @"Fever", @"Cough", @"Dizziness", @"Diarrhea", @"Chest pain", @"Earache", @"Skin rashes", @"Hip pain", @"Knee pain", @"Low back pain", @"Neck pain", nil];
+    items = [[NSMutableArray alloc] init];
+    [items addObject:@"Common Symptoms"];
+    
+    NSError *error;
+    NSString *url = @"http://128.199.191.61:9000/api/v1/symptom";
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    
+    NSLog(@"%@", json);
+    [items addObjectsFromArray:[[json valueForKey:@"symptoms"] valueForKey:@"name"]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
