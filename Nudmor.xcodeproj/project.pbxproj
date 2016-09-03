@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C64F5E961D7A91A800D69DE9 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F5E951D7A91A800D69DE9 /* APIManager.m */; };
 		C66108811D61A22F00F6DB6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108801D61A22F00F6DB6E /* main.m */; };
 		C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108831D61A22F00F6DB6E /* AppDelegate.m */; };
 		C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108861D61A22F00F6DB6E /* FeedViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C64F5E941D7A91A800D69DE9 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		C64F5E951D7A91A800D69DE9 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		C661087C1D61A22F00F6DB6E /* Nudmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66108801D61A22F00F6DB6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C66108821D61A22F00F6DB6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C64F5E931D7A905800D69DE9 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				C66108E11D6AC4F300F6DB6E /* AppointmentManager.h */,
+				C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */,
+				C64F5E941D7A91A800D69DE9 /* APIManager.h */,
+				C64F5E951D7A91A800D69DE9 /* APIManager.m */,
+			);
+			name = DAL;
+			sourceTree = "<group>";
+		};
 		C66108731D61A22F00F6DB6E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +108,7 @@
 		C661087E1D61A22F00F6DB6E /* Nudmor */ = {
 			isa = PBXGroup;
 			children = (
+				C64F5E931D7A905800D69DE9 /* DAL */,
 				C66108E41D6B39B900F6DB6E /* 01-progress.gif */,
 				C66108821D61A22F00F6DB6E /* AppDelegate.h */,
 				C66108831D61A22F00F6DB6E /* AppDelegate.m */,
@@ -122,8 +137,6 @@
 				C66108DC1D69EBC500F6DB6E /* Appointment.m */,
 				C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */,
 				C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */,
-				C66108E11D6AC4F300F6DB6E /* AppointmentManager.h */,
-				C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */,
 			);
 			path = Nudmor;
 			sourceTree = "<group>";
@@ -212,6 +225,7 @@
 				C66108DD1D69EBC500F6DB6E /* Appointment.m in Sources */,
 				C66108D21D699B6C00F6DB6E /* RootTabBarController.m in Sources */,
 				C66108E01D69ED1A00F6DB6E /* AppointmentCell.m in Sources */,
+				C64F5E961D7A91A800D69DE9 /* APIManager.m in Sources */,
 				C661089E1D629DE600F6DB6E /* LocationViewController.m in Sources */,
 				C66108CF1D69894C00F6DB6E /* SummaryViewController.m in Sources */,
 				C661088A1D61A22F00F6DB6E /* AppointmentViewController.m in Sources */,
@@ -375,6 +389,7 @@
 				C66108981D61A22F00F6DB6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "SymptomViewController.h"
+#import "APIManager.h"
 
 @interface SymptomViewController ()
 
@@ -29,10 +30,9 @@
     items = [[NSMutableArray alloc] init];
     [items addObject:@"Common Symptoms"];
     
-    NSError *error;
-    NSString *url = @"http://128.199.191.61:9000/api/v1/symptom";
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    APIManager *apiManager = [[APIManager alloc] init];
+    
+    NSDictionary *json = [apiManager GetAllSymptoms];
     
     NSLog(@"%@", json);
     [items addObjectsFromArray:[[json valueForKey:@"symptoms"] valueForKey:@"name"]];
