@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "UserLocationManager.h"
 
-@interface LocationViewController : UIViewController
+@interface LocationViewController : UIViewController <CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *locationTable;
 

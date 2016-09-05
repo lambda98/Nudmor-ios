@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C64F5E961D7A91A800D69DE9 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F5E951D7A91A800D69DE9 /* APIManager.m */; };
+		C64F5E991D7D005A00D69DE9 /* UserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F5E981D7D005A00D69DE9 /* UserLocationManager.m */; };
 		C66108811D61A22F00F6DB6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108801D61A22F00F6DB6E /* main.m */; };
 		C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108831D61A22F00F6DB6E /* AppDelegate.m */; };
 		C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108861D61A22F00F6DB6E /* FeedViewController.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		C64F5E941D7A91A800D69DE9 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		C64F5E951D7A91A800D69DE9 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		C64F5E971D7D005A00D69DE9 /* UserLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationManager.h; sourceTree = "<group>"; };
+		C64F5E981D7D005A00D69DE9 /* UserLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationManager.m; sourceTree = "<group>"; };
 		C661087C1D61A22F00F6DB6E /* Nudmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66108801D61A22F00F6DB6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C66108821D61A22F00F6DB6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				C66108E21D6AC4F300F6DB6E /* AppointmentManager.m */,
 				C64F5E941D7A91A800D69DE9 /* APIManager.h */,
 				C64F5E951D7A91A800D69DE9 /* APIManager.m */,
+				C64F5E971D7D005A00D69DE9 /* UserLocationManager.h */,
+				C64F5E981D7D005A00D69DE9 /* UserLocationManager.m */,
 			);
 			name = DAL;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				C66108E31D6AC4F300F6DB6E /* AppointmentManager.m in Sources */,
 				C66108A11D62A1B400F6DB6E /* SearchResultViewController.m in Sources */,
 				C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */,
+				C64F5E991D7D005A00D69DE9 /* UserLocationManager.m in Sources */,
 				C66108CC1D67F79100F6DB6E /* HospitalViewController.m in Sources */,
 				C66108811D61A22F00F6DB6E /* main.m in Sources */,
 			);

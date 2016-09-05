@@ -22,6 +22,24 @@
     // Do any additional setup after loading the view.
     
     locations = [NSArray arrayWithObjects:@"Use my location", @"Saved Places", @"Home", @"Work", nil];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [locationManager requestWhenInUseAuthorization];
+    
+    if([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [locationManager requestWhenInUseAuthorization];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -46,6 +64,13 @@
     }
     
     return cell;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)updatedLocations
+{
+    CLLocation *lastLocation = [updatedLocations lastObject];
+    UserLocationManager *userLocationManager = [UserLocationManager sharedManager];
+    [userLocationManager updateUserLocation:lastLocation];
 }
 
 /*
