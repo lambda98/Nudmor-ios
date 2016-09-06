@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "UserLocationManager.h"
+#import "SearchResultViewController.h"
 
 @interface LocationViewController : UIViewController <CLLocationManagerDelegate>
 {

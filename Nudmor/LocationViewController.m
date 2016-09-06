@@ -73,6 +73,22 @@
     [userLocationManager updateUserLocation:lastLocation];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"ShowSearchResult"])
+    {
+        UserLocationManager *userLocationManager = [UserLocationManager sharedManager];
+        CLLocation *userLocation = [userLocationManager getUserLocation];
+        
+        NSLog(@"User location %f %f", userLocation.coordinate.latitude, userLocation.coordinate.longitude);
+        
+        SearchResultViewController *destViewController = segue.destinationViewController;
+        destViewController.searchLocation = [[CLLocation alloc] initWithLatitude:13.001 longitude:(100.001)];
+        
+        [locationManager stopUpdatingLocation];
+    }
+}
+
 /*
 #pragma mark - Navigation
 

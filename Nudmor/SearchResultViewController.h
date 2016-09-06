@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "HospitalViewController.h"
+#import "APIManager.h"
 
 @interface SearchResultViewController : UIViewController<MakeBookingDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *resultMap;
+@property (strong, nonatomic) CLLocation *searchLocation;
 
 @end

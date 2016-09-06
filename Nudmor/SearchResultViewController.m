@@ -16,6 +16,7 @@
 @implementation SearchResultViewController
 
 @synthesize resultMap;
+@synthesize searchLocation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,11 +24,48 @@
     
     [resultMap setDelegate:self];
     
-    MKCoordinateRegion region;
-    region.center.latitude = 13.7396728;
-    region.center.longitude = 100.5611107;
+    NSLog(@"Search Location: %f %f", searchLocation.coordinate.latitude, searchLocation.coordinate.longitude);
     
-    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    APIManager *apiManager = [[APIManager alloc] init];
+    NSDictionary *hospitals = [apiManager searchHospitals:searchLocation];
+    
+    
+    NSArray *hospitalList = [[NSArray alloc] initWithArray:[hospitals valueForKey:@"hospitals"]];
+    //NSLog(@"%@", hospitalList);
+    
+    NSLog(@"%@",[[hospitalList objectAtIndex:0] valueForKey:@"latitude"]);
+    
+    MKCoordinateRegion region;
+    
+    for(int i = 0; i < 3; i++)
+    {
+        NSDictionary *hospital = [hospitalList objectAtIndex:i];
+        double latitude = [[hospital valueForKey:@"latitude"] doubleValue];
+        double longitude = [[hospital valueForKey:@"longitude"] doubleValue];
+        
+        if(i == 0)
+        {
+            region.center.latitude = latitude;
+            region.center.longitude = longitude;
+        }
+        
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        [annotation setCoordinate:CLLocationCoordinate2DMake(latitude, longitude)];
+        [annotation setTitle:[hospital valueForKey:@"name"]];
+        [annotation setSubtitle:@"10.00 - 17.30"];
+        
+        [resultMap addAnnotation:annotation];
+        
+        if(i == 0)
+        {
+            [resultMap selectAnnotation:annotation animated:YES];
+        }
+    }
+    
+    
+    
+    /*
+     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     [annotation setCoordinate:CLLocationCoordinate2DMake(13.7396728, 100.5611107)];
     [annotation setTitle:@"Simitivej Hospital"];
     [annotation setSubtitle:@"10.00 - 17.30"];
@@ -41,22 +79,24 @@
     [annotation3 setCoordinate:CLLocationCoordinate2DMake(13.735689, 100.561605)];
     [annotation3 setTitle:@"Ramkhamhang Hospital"];
     [annotation3 setSubtitle:@"7.30 - 18.30"];
+     */
     
     MKCoordinateSpan span;
     double radius = 1 / 1000;
-    span.latitudeDelta = 0.00725;//radius / 112.0;
-    span.longitudeDelta = 0.00725;
+    span.latitudeDelta = 0.09025;//radius / 112.0;
+    span.longitudeDelta = 0.09025;
     
     region.span = span;
     
     resultMap.region = region;
+    /*
     [resultMap addAnnotation:annotation];
     [resultMap selectAnnotation:annotation animated:YES];
     
     [resultMap addAnnotation:annotation2];
-    //[mapView selectAnnotation:annotation2 animated:YES];
     
     [resultMap addAnnotation:annotation3];
+     */
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation {

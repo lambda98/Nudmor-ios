@@ -32,7 +32,7 @@
     
     APIManager *apiManager = [[APIManager alloc] init];
     
-    NSDictionary *json = [apiManager GetAllSymptoms];
+    NSDictionary *json = [apiManager getAllSymptoms];
     
     NSLog(@"%@", json);
     [items addObjectsFromArray:[[json valueForKey:@"symptoms"] valueForKey:@"name"]];

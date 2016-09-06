@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface APIManager : NSObject
 
-- (NSDictionary *)GetAllSymptoms;
+- (NSDictionary *)getAllSymptoms;
+- (NSDictionary *)searchHospitals:(CLLocation *)location;
 
 @end
