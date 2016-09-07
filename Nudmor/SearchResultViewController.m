@@ -82,9 +82,8 @@
      */
     
     MKCoordinateSpan span;
-    double radius = 1 / 1000;
-    span.latitudeDelta = 0.09025;//radius / 112.0;
-    span.longitudeDelta = 0.09025;
+    span.latitudeDelta = (13.785453 - 13.735052) * 2.2; //TODO: Add logic to find max/min latitude and longitude
+    span.longitudeDelta = 100.583626 - 100.57364;
     
     region.span = span;
     
