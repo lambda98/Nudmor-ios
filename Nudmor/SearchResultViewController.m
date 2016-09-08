@@ -31,7 +31,6 @@
     
     
     NSArray *hospitalList = [[NSArray alloc] initWithArray:[hospitals valueForKey:@"hospitals"]];
-    //NSLog(@"%@", hospitalList);
     
     NSLog(@"%@",[[hospitalList objectAtIndex:0] valueForKey:@"latitude"]);
     
@@ -62,25 +61,6 @@
         }
     }
     
-    
-    
-    /*
-     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-    [annotation setCoordinate:CLLocationCoordinate2DMake(13.7396728, 100.5611107)];
-    [annotation setTitle:@"Simitivej Hospital"];
-    [annotation setSubtitle:@"10.00 - 17.30"];
-    
-    MKPointAnnotation *annotation2 = [[MKPointAnnotation alloc] init];
-    [annotation2 setCoordinate:CLLocationCoordinate2DMake(13.7427315, 100.5605466)];
-    [annotation2 setTitle:@"Siriraj Hospital"];
-    [annotation2 setSubtitle:@"13.30 - 21.30"];
-    
-    MKPointAnnotation *annotation3 = [[MKPointAnnotation alloc] init];
-    [annotation3 setCoordinate:CLLocationCoordinate2DMake(13.735689, 100.561605)];
-    [annotation3 setTitle:@"Ramkhamhang Hospital"];
-    [annotation3 setSubtitle:@"7.30 - 18.30"];
-     */
-    
     MKCoordinateSpan span;
     span.latitudeDelta = (13.785453 - 13.735052) * 2.2; //TODO: Add logic to find max/min latitude and longitude
     span.longitudeDelta = 100.583626 - 100.57364;
@@ -88,14 +68,6 @@
     region.span = span;
     
     resultMap.region = region;
-    /*
-    [resultMap addAnnotation:annotation];
-    [resultMap selectAnnotation:annotation animated:YES];
-    
-    [resultMap addAnnotation:annotation2];
-    
-    [resultMap addAnnotation:annotation3];
-     */
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation {
