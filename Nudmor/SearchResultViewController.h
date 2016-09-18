@@ -11,6 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "HospitalViewController.h"
 #import "APIManager.h"
+#import "JPSThumbnailAnnotation/JPSThumbnail.h"
+#import "JPSThumbnailAnnotation/JPSThumbnailAnnotation.h"
 
 @interface SearchResultViewController : UIViewController<MakeBookingDelegate>
 

@@ -85,17 +85,14 @@
             }
         }
         
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        [annotation setCoordinate:CLLocationCoordinate2DMake(latitude, longitude)];
-        [annotation setTitle:[hospital valueForKey:@"name"]];
-        [annotation setSubtitle:@"10.00 - 17.30"];
+        JPSThumbnail *thumbnail = [[JPSThumbnail alloc] init];
+        thumbnail.title = [hospital valueForKey:@"name"];
+        thumbnail.subtitle = @"10.00 - 17.30";
+        thumbnail.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+        thumbnail.image = [UIImage imageNamed:@"apple.jpg"];
+        thumbnail.disclosureBlock = ^{ NSLog(@"selected Empire"); };
         
-        [resultMap addAnnotation:annotation];
-        
-        if(i == 0)
-        {
-            [resultMap selectAnnotation:annotation animated:YES];
-        }
+        [resultMap addAnnotation:[JPSThumbnailAnnotation annotationWithThumbnail:thumbnail]];
     }
     
     MKCoordinateSpan span;
@@ -109,18 +106,22 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)aMapView viewForAnnotation:(id <MKAnnotation>)annotation {
     
-    
-    MKPinAnnotationView *annotationView = [aMapView dequeueReusableAnnotationViewWithIdentifier:@"String"];
-    if(!annotationView) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"String"];
-        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        
+    if ([annotation conformsToProtocol:@protocol(JPSThumbnailAnnotationProtocol)]) {
+        return [((NSObject<JPSThumbnailAnnotationProtocol> *)annotation) annotationViewInMap:resultMap];
     }
-    
-    annotationView.enabled = YES;
-    annotationView.canShowCallout = YES;
-    
-    return annotationView;
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
+        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didSelectAnnotationViewInMap:mapView];
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
+        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didDeselectAnnotationViewInMap:mapView];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
