@@ -36,7 +36,19 @@
     
     MKCoordinateRegion region;
     
-    for(int i = 0; i < 3; i++)
+    NSUInteger numberOfResultToShow = 3;
+    
+    double maxLongitude = 0;
+    double minLongitude = 0;
+    double maxLatitude = 0;
+    double minLatitude = 0;
+    
+    if (hospitalList.count < 3)
+    {
+        numberOfResultToShow = hospitalList.count;
+    }
+    
+    for(int i = 0; i < numberOfResultToShow; i++)
     {
         NSDictionary *hospital = [hospitalList objectAtIndex:i];
         double latitude = [[hospital valueForKey:@"latitude"] doubleValue];
@@ -46,6 +58,31 @@
         {
             region.center.latitude = latitude;
             region.center.longitude = longitude;
+            
+            maxLatitude = latitude;
+            minLatitude = latitude;
+            maxLongitude = longitude;
+            minLongitude = longitude;
+        }
+        else
+        {
+            if(latitude > maxLatitude)
+            {
+                maxLatitude = latitude;
+            }
+            else if(latitude < minLatitude)
+            {
+                minLatitude = latitude;
+            }
+            
+            if(longitude > maxLongitude)
+            {
+                maxLongitude = longitude;
+            }
+            else if (longitude < minLongitude)
+            {
+                minLongitude = longitude;
+            }
         }
         
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -62,8 +99,8 @@
     }
     
     MKCoordinateSpan span;
-    span.latitudeDelta = (13.785453 - 13.735052) * 2.2; //TODO: Add logic to find max/min latitude and longitude
-    span.longitudeDelta = 100.583626 - 100.57364;
+    span.latitudeDelta = (maxLatitude - minLatitude) * 3;
+    span.longitudeDelta = maxLongitude - minLongitude;
     
     region.span = span;
     
