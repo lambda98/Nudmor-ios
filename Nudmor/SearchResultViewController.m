@@ -113,15 +113,13 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
-        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didSelectAnnotationViewInMap:mapView];
-    }
+    NSLog(@"tapped");
+    
+    [self performSegueWithIdentifier:@"ShowHospital" sender:nil];
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
-        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didDeselectAnnotationViewInMap:mapView];
-    }
+    
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
