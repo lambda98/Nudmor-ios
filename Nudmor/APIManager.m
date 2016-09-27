@@ -13,7 +13,7 @@
 - (NSDictionary *)getAllSymptoms
 {
     NSError *error;
-    NSString *url = @"http://128.199.191.61:9000/api/v1/symptom";
+    NSString *url = @"http://128.199.191.61:9000/api/v1/symptoms";
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     return json;

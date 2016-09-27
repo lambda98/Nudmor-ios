@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -494,12 +494,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-wR-nzm">
-                                <rect key="frame" x="0.0" y="141" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="493353462.64783198">
-                                    <!--2016-08-20 02:37:42 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhe-Ko-PPA">
                                 <rect key="frame" x="139" y="402" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -508,9 +502,21 @@
                                     <action selector="makeBooking:" destination="FmI-D2-NSd" eventType="touchUpInside" id="hk6-sC-8tQ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-pb-4Zw" customClass="DAYCalendarView">
+                                <rect key="frame" x="0.0" y="120" width="375" height="251"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="0wH-l9-FE6"/>
+                                    <constraint firstAttribute="height" constant="260" id="8vz-V6-aKu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarHeightConstraint" destination="8vz-V6-aKu" id="ETa-UB-Q4i"/>
+                        <outlet property="calendarView" destination="SPL-pb-4Zw" id="CqD-dC-lid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfD-3U-Dck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

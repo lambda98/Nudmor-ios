@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.calendarView addTarget:self action:@selector(calendarViewDidChange:) forControlEvents:UIControlEventValueChanged];
+    self.calendarHeightConstraint.constant = 100;
+    self.calendarView.singleRowMode = YES;
+}
+
+- (void)calendarViewDidChange:(id)sender {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY-MM-dd";
+    NSLog(@"%@", [formatter stringFromDate:self.calendarView.selectedDate]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +39,11 @@
 }
 - (IBAction)makeBooking:(id)sender {
     [self.delegate setBookingDetail:@"foo"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY-MM-dd";
+    NSLog(@"%@", [formatter stringFromDate:self.calendarView.selectedDate]);
+    
     [self dismissCurrentView];
 }
 

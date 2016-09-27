@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Daysquare/Daysquare.h"
 
 @protocol MakeBookingDelegate <NSObject>
 
@@ -17,5 +18,8 @@
 @interface HospitalViewController : UIViewController
 
 @property id<MakeBookingDelegate> delegate;
+@property (strong, nonatomic) IBOutlet DAYCalendarView *calendarView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *calendarHeightConstraint;
+
 
 @end
