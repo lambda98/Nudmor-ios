@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Appointment.h"
 
 @interface AppointmentManager : NSObject {
     NSArray *appointments;
+    Appointment *currentAppointment;
 }
 
 @property (nonatomic, retain) NSArray *appointments;
+@property (nonatomic, retain) Appointment *currentAppointment;
 
 + (id)sharedManager;
 

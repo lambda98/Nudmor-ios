@@ -14,5 +14,12 @@
 @property (nonatomic, copy) NSString *month;
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, copy) NSString *hospitalName;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *surname;
+@property (nonatomic, copy) NSString *email;
+@property (nonatomic, copy) NSString *mobileNo;
+@property (nonatomic, copy) NSString *symptomName;
+@property (nonatomic, copy) NSString *hospitalTimeId;
+@property (nonatomic, copy) NSString *symptomId;
 
 @end
