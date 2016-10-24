@@ -28,4 +28,13 @@
     return json;
 }
 
+- (NSDictionary *)getHospitalTimeTable:(int)hospitalId withDate:(NSString *)date
+{
+    NSString *url = [NSString stringWithFormat:@"http://128.199.191.61:9000/api/v1/hospitals/%d/date/%@", hospitalId, date];
+    NSError *error;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    return json;
+}
+
 @end

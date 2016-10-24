@@ -13,5 +13,6 @@
 
 - (NSDictionary *)getAllSymptoms;
 - (NSDictionary *)searchHospitals:(CLLocation *)location;
+- (NSDictionary *)getHospitalTimeTable:(int) hospitalId withDate:(NSString *)date;
 
 @end

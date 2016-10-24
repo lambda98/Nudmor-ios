@@ -13,10 +13,20 @@
 @end
 
 @implementation HospitalViewController
+{
+    NSMutableArray *timeTable;
+    int hospitalId;
+    APIManager *apiManager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //timeTable = [NSMutableArray arrayWithObjects:@"10.00 - 11.00", @"11.00 - 12.00", @"13.00 - 14.00", @"14.00 - 15.00", @"15.00 - 16.00", @"16.00 - 17.00", nil];
+    apiManager = [[APIManager alloc] init];
+    
+    hospitalId = 1;
     
     [self.calendarView addTarget:self action:@selector(calendarViewDidChange:) forControlEvents:UIControlEventValueChanged];
     self.calendarHeightConstraint.constant = 100;
@@ -27,7 +37,17 @@
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"YYYY-MM-dd";
-    NSLog(@"%@", [formatter stringFromDate:self.calendarView.selectedDate]);
+    NSString *date = [formatter stringFromDate:self.calendarView.selectedDate];
+    NSLog(@"%@", date);
+    
+    NSDictionary *result = [apiManager getHospitalTimeTable:hospitalId withDate:date];
+    NSArray *timetableList = [[NSArray alloc] initWithArray:[result valueForKey:@"time_slots"]];
+    
+    timeTable = [timetableList valueForKey:@"time_slot"];
+    
+    
+    
+    [self.hospitalTimeTable reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +70,21 @@
 - (void)dismissCurrentView {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [timeTable count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimeTableViewCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    cell.textLabel.text = [timeTable objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation
