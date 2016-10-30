@@ -19,6 +19,7 @@
 		C64F5EAC1D8EFAC700D69DE9 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C64F5EAB1D8EFAC700D69DE9 /* apple.jpg */; };
 		C64F5EB01D9171D400D69DE9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64F5EAE1D9171D400D69DE9 /* Fabric.framework */; };
 		C64F5EB11D9171D400D69DE9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64F5EAF1D9171D400D69DE9 /* Crashlytics.framework */; };
+		C65892C61DC5FC640024DAA3 /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = C65892C51DC5FC640024DAA3 /* Hospital.m */; };
 		C66108811D61A22F00F6DB6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108801D61A22F00F6DB6E /* main.m */; };
 		C66108841D61A22F00F6DB6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108831D61A22F00F6DB6E /* AppDelegate.m */; };
 		C66108871D61A22F00F6DB6E /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66108861D61A22F00F6DB6E /* FeedViewController.m */; };
@@ -59,6 +60,8 @@
 		C64F5EAB1D8EFAC700D69DE9 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
 		C64F5EAE1D9171D400D69DE9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		C64F5EAF1D9171D400D69DE9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		C65892C41DC5FC640024DAA3 /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
+		C65892C51DC5FC640024DAA3 /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
 		C661087C1D61A22F00F6DB6E /* Nudmor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nudmor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66108801D61A22F00F6DB6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C66108821D61A22F00F6DB6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +156,17 @@
 			name = JPSThumbnail;
 			sourceTree = "<group>";
 		};
+		C65892C31DC5FC1A0024DAA3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C66108DB1D69EBC500F6DB6E /* Appointment.h */,
+				C66108DC1D69EBC500F6DB6E /* Appointment.m */,
+				C65892C41DC5FC640024DAA3 /* Hospital.h */,
+				C65892C51DC5FC640024DAA3 /* Hospital.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		C66108731D61A22F00F6DB6E = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +193,7 @@
 		C661087E1D61A22F00F6DB6E /* Nudmor */ = {
 			isa = PBXGroup;
 			children = (
+				C65892C31DC5FC1A0024DAA3 /* Data */,
 				C64F5EAB1D8EFAC700D69DE9 /* apple.jpg */,
 				C64F5EAA1D8EF81A00D69DE9 /* JPSThumbnail */,
 				C64F5E931D7A905800D69DE9 /* DAL */,
@@ -206,8 +221,6 @@
 				C661089D1D629DE600F6DB6E /* LocationViewController.m */,
 				C66108CD1D69894C00F6DB6E /* SummaryViewController.h */,
 				C66108CE1D69894C00F6DB6E /* SummaryViewController.m */,
-				C66108DB1D69EBC500F6DB6E /* Appointment.h */,
-				C66108DC1D69EBC500F6DB6E /* Appointment.m */,
 				C66108DE1D69ED1A00F6DB6E /* AppointmentCell.h */,
 				C66108DF1D69ED1A00F6DB6E /* AppointmentCell.m */,
 			);
@@ -378,6 +391,7 @@
 				C64F5E991D7D005A00D69DE9 /* UserLocationManager.m in Sources */,
 				C66108CC1D67F79100F6DB6E /* HospitalViewController.m in Sources */,
 				C66108811D61A22F00F6DB6E /* main.m in Sources */,
+				C65892C61DC5FC640024DAA3 /* Hospital.m in Sources */,
 				C64F5EA71D8EF81000D69DE9 /* JPSThumbnailAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

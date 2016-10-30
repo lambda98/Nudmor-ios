@@ -13,6 +13,8 @@
 #import "APIManager.h"
 #import "JPSThumbnailAnnotation/JPSThumbnail.h"
 #import "JPSThumbnailAnnotation/JPSThumbnailAnnotation.h"
+#import "JPSThumbnailAnnotation/JPSThumbnailAnnotationView.h"
+#import "Hospital.h"
 
 @interface SearchResultViewController : UIViewController<MakeBookingDelegate>
 

@@ -15,6 +15,7 @@
 @implementation HospitalViewController
 {
     NSMutableArray *timeTable;
+    NSMutableArray *timeTableId;
     int hospitalId;
     APIManager *apiManager;
 }
@@ -26,7 +27,8 @@
     //timeTable = [NSMutableArray arrayWithObjects:@"10.00 - 11.00", @"11.00 - 12.00", @"13.00 - 14.00", @"14.00 - 15.00", @"15.00 - 16.00", @"16.00 - 17.00", nil];
     apiManager = [[APIManager alloc] init];
     
-    hospitalId = 1;
+    hospitalId = self.hospital.hospitalId.intValue;
+    self.hospitalNameLabel.text = self.hospital.hospitalName;
     
     [self.calendarView addTarget:self action:@selector(calendarViewDidChange:) forControlEvents:UIControlEventValueChanged];
     self.calendarHeightConstraint.constant = 100;
@@ -43,9 +45,10 @@
     NSDictionary *result = [apiManager getHospitalTimeTable:hospitalId withDate:date];
     NSArray *timetableList = [[NSArray alloc] initWithArray:[result valueForKey:@"time_slots"]];
     
+    //timeTable = [NSMutableArray arrayWithObjects:@"10.00 - 11.00", @"11.00 - 12.00", @"13.00 - 14.00", @"14.00 - 15.00", @"15.00 - 16.00", @"16.00 - 17.00", nil];
+    
     timeTable = [timetableList valueForKey:@"time_slot"];
-    
-    
+    timeTableId = [timetableList valueForKey:@"id"];
     
     [self.hospitalTimeTable reloadData];
 }
@@ -83,6 +86,19 @@
     cell.textLabel.text = [timeTable objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    
+    NSString *timeSlotText = [timeTable objectAtIndex:indexPath.row];
+    NSString *timeSlotId = [timeTableId objectAtIndex:indexPath.row];
+    
+    manager.currentAppointment.timeSlot = timeSlotText;
+    manager.currentAppointment.timeSlotId = timeSlotId;
+    
+    NSLog(@"%@ %@", timeSlotId, timeSlotText);
 }
 
 

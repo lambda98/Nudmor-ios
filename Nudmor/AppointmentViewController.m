@@ -58,9 +58,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
     
-    cell.dateLabel.text = @"30";
-    cell.monthLabel.text = @"SEP";
-    cell.hospitalLabel.text = @"Simitivej Hospital";
+    cell.dateLabel.text = @"31";
+    cell.monthLabel.text = @"OCT";
+    cell.hospitalLabel.text = @"โรงพยาบาลบำรุงราษฎร์";
     cell.timeLabel.text = @"11.00";
     
     return cell;

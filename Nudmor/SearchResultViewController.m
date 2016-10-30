@@ -90,7 +90,12 @@
         thumbnail.subtitle = @"10.00 - 17.30";
         thumbnail.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
         thumbnail.image = [UIImage imageNamed:@"apple.jpg"];
-        thumbnail.disclosureBlock = ^{ NSLog(@"selected Empire"); };
+        
+        Hospital *hospitalObj = [[Hospital alloc] init];
+        hospitalObj.hospitalName = [hospital valueForKey:@"name"];
+        hospitalObj.hospitalId = [hospital valueForKey:@"id"];
+        
+        thumbnail.disclosureBlock = ^{ [self performSegueWithIdentifier:@"ShowHospital" sender:hospitalObj]; };
         
         [resultMap addAnnotation:[JPSThumbnailAnnotation annotationWithThumbnail:thumbnail]];
     }
@@ -113,13 +118,15 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    NSLog(@"tapped");
-    
-    [self performSegueWithIdentifier:@"ShowHospital" sender:nil];
+    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
+        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didSelectAnnotationViewInMap:mapView];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-    
+    if ([view conformsToProtocol:@protocol(JPSThumbnailAnnotationViewProtocol)]) {
+        [((NSObject<JPSThumbnailAnnotationViewProtocol> *)view) didDeselectAnnotationViewInMap:mapView];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -133,7 +140,9 @@
 {
     if([segue.identifier isEqualToString:@"ShowHospital"])
     {
+        Hospital *hospital = sender;
         HospitalViewController *desViewController = segue.destinationViewController;
+        desViewController.hospital = hospital;
         desViewController.delegate = self;
     }
 }
