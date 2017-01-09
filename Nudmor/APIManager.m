@@ -40,7 +40,7 @@
 
 - (NSDictionary *)createBooking:(Appointment *)appointment
 {
-    NSURL *url = [NSURL URLWithString:@"http://128.199.191.61:9000/api/v1/bookings"];
+    NSURL *url = [NSURL URLWithString:@"http://nudmor.net/api/v1/booking/R14967RADf19r1Ha2wS4lxk7D5wmHBTn"];
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     NSDictionary *tmp = [[NSDictionary alloc] initWithObjectsAndKeys:
