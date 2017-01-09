@@ -8,6 +8,7 @@
 
 #import "SummaryViewController.h"
 #import "AppointmentManager.h"
+#import "APIManager.h"
 
 @interface SummaryViewController ()
 
@@ -18,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    
+    self.hospitalName.text = manager.currentAppointment.hospitalName;
+    self.dateAndTime.text = [NSString stringWithFormat:@"%@ %@ %@ %@", manager.currentAppointment.date, manager.currentAppointment.month, manager.currentAppointment.year, manager.currentAppointment.timeSlot];
+    self.symptomName.text = manager.currentAppointment.symptomName;
+    self.userName.text = manager.currentAppointment.name;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +33,7 @@
 }
 - (IBAction)confirmBooking:(id)sender {
     
-    
+    AppointmentManager *manager = [AppointmentManager sharedManager];
     
     UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [overlay setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
@@ -35,8 +42,11 @@
     
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0, false);
     
-    AppointmentManager *manager = [AppointmentManager sharedManager];
-    manager.appointments = [NSArray arrayWithObjects:@"book", nil];
+    APIManager *api = [[APIManager alloc] init];
+    [api createBooking:manager.currentAppointment];
+    
+    //AppointmentManager *manager = [AppointmentManager sharedManager];
+    manager.appointments = [NSArray arrayWithObjects:manager.currentAppointment, nil];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //UIViewController *appointmentViewController = [storyboard instantiateViewControllerWithIdentifier:@"AppointmentView"];

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SummaryViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *hospitalName;
+@property (strong, nonatomic) IBOutlet UILabel *dateAndTime;
+@property (strong, nonatomic) IBOutlet UILabel *symptomName;
+@property (strong, nonatomic) IBOutlet UILabel *userName;
 
 @end

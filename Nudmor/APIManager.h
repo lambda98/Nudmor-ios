@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Appointment.h"
 
 @interface APIManager : NSObject
 
 - (NSDictionary *)getAllSymptoms;
 - (NSDictionary *)searchHospitals:(CLLocation *)location;
 - (NSDictionary *)getHospitalTimeTable:(int) hospitalId withDate:(NSString *)date;
+- (NSDictionary *)createBooking:(Appointment *)appointment;
 
 @end

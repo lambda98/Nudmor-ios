@@ -7,6 +7,7 @@
 //
 
 #import "LocationViewController.h"
+#import "AppointmentManager.h"
 
 @interface LocationViewController ()
 
@@ -28,6 +29,9 @@
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
+    
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    self.symptomName.text = manager.currentAppointment.symptomName;
 }
 
 - (void)viewDidAppear:(BOOL)animated

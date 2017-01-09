@@ -63,9 +63,15 @@
 - (IBAction)makeBooking:(id)sender {
     [self.delegate setBookingDetail:@"foo"];
     
+    AppointmentManager *manager = [AppointmentManager sharedManager];
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"YYYY-MM-dd";
-    NSLog(@"%@", [formatter stringFromDate:self.calendarView.selectedDate]);
+    formatter.dateFormat = @"dd";
+    manager.currentAppointment.date = [formatter stringFromDate:self.calendarView.selectedDate];
+    formatter.dateFormat = @"MMM";
+    manager.currentAppointment.month = [formatter stringFromDate:self.calendarView.selectedDate];
+    formatter.dateFormat = @"YYYY";
+    manager.currentAppointment.year = [formatter stringFromDate:self.calendarView.selectedDate];
     
     [self dismissCurrentView];
 }
@@ -97,6 +103,7 @@
     
     manager.currentAppointment.timeSlot = timeSlotText;
     manager.currentAppointment.timeSlotId = timeSlotId;
+    manager.currentAppointment.hospitalName = self.hospitalNameLabel.text;
     
     NSLog(@"%@ %@", timeSlotId, timeSlotText);
 }

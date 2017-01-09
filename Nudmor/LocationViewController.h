@@ -17,5 +17,6 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *locationTable;
+@property (strong, nonatomic) IBOutlet UILabel *symptomName;
 
 @end

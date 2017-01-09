@@ -9,6 +9,7 @@
 #import "AppointmentViewController.h"
 #import "AppointmentCell.h"
 #import "AppointmentManager.h"
+#import "Appointment.h"
 
 @interface AppointmentViewController ()
 
@@ -58,10 +59,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppointmentCell" forIndexPath:indexPath];
     
-    cell.dateLabel.text = @"31";
-    cell.monthLabel.text = @"OCT";
-    cell.hospitalLabel.text = @"โรงพยาบาลบำรุงราษฎร์";
-    cell.timeLabel.text = @"11.00";
+    Appointment *appointment = [appointments objectAtIndex:indexPath.row];
+    
+    cell.dateLabel.text = appointment.date;
+    cell.monthLabel.text = appointment.month;
+    cell.hospitalLabel.text = appointment.hospitalName;
+    cell.timeLabel.text = appointment.timeSlot;
     
     return cell;
 }

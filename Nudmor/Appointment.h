@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSString *month;
+@property (nonatomic, copy) NSString *year;
 @property (nonatomic, copy) NSString *timeSlot;
 @property (nonatomic, copy) NSString *timeSlotId;
 @property (nonatomic, copy) NSString *hospitalName;
