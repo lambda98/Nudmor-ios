@@ -51,8 +51,8 @@
     for(int i = 0; i < numberOfResultToShow; i++)
     {
         NSDictionary *hospital = [hospitalList objectAtIndex:i];
-        double latitude = [[hospital valueForKey:@"latitude"] doubleValue];
-        double longitude = [[hospital valueForKey:@"longitude"] doubleValue];
+        double latitude = [[hospital valueForKey:@"lat"] doubleValue];
+        double longitude = [[hospital valueForKey:@"lng"] doubleValue];
         
         if(i == 0)
         {

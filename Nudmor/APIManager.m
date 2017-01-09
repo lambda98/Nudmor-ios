@@ -13,7 +13,7 @@
 - (NSDictionary *)getAllSymptoms
 {
     NSError *error;
-    NSString *url = @"http://128.199.191.61:9000/api/v1/symptoms";
+    NSString *url = @"http://nudmor.net/api/v1/symptoms/R14967RADf19r1Ha2wS4lxk7D5wmHBTn";
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     return json;
@@ -21,7 +21,8 @@
 
 - (NSDictionary *)searchHospitals:(CLLocation *)location
 {
-    NSString *url = [NSString stringWithFormat:@"http://128.199.191.61:9000/api/v1/hospitals/location/%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+    //NSString *url = [NSString stringWithFormat:@"http://128.199.191.61:9000/api/v1/hospitals/location/%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+    NSString *url = @"http://nudmor.net/api/v1/hospitals/R14967RADf19r1Ha2wS4lxk7D5wmHBTn";
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
@@ -30,7 +31,7 @@
 
 - (NSDictionary *)getHospitalTimeTable:(int)hospitalId withDate:(NSString *)date
 {
-    NSString *url = [NSString stringWithFormat:@"http://128.199.191.61:9000/api/v1/hospitals/%d/date/%@", hospitalId, date];
+    NSString *url = [NSString stringWithFormat:@"http://nudmor.net/api/v1/hospitals/%d/date/%@/R14967RADf19r1Ha2wS4lxk7D5wmHBTn", hospitalId, date];
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
