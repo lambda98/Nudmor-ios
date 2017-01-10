@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    locations = [NSArray arrayWithObjects:@"Use my location", @"Saved Places", @"Home", @"Work", nil];
+    locations = [NSArray arrayWithObjects:@"ใช้ตำแหน่งปัจจุบัน", @"สถานที่ที่บันทึกไว้", @"บ้าน", @"ที่ทำงาน", nil];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;

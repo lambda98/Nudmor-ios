@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A13BF5079377A9CA8D3579D0 /* Pods_Nudmor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C61AAFCD625F3BA034B93FA /* Pods_Nudmor.framework */; };
+		C637BA841E246AED009ADBD4 /* 2_landing_page_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C637BA821E246AED009ADBD4 /* 2_landing_page_background.png */; };
+		C637BA851E246AED009ADBD4 /* 6_finish_page_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C637BA831E246AED009ADBD4 /* 6_finish_page_background.png */; };
 		C64F5E961D7A91A800D69DE9 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F5E951D7A91A800D69DE9 /* APIManager.m */; };
 		C64F5E991D7D005A00D69DE9 /* UserLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F5E981D7D005A00D69DE9 /* UserLocationManager.m */; };
 		C64F5E9B1D8EF40000D69DE9 /* JPSThumbnailAnnotation in Resources */ = {isa = PBXBuildFile; fileRef = C64F5E9A1D8EF40000D69DE9 /* JPSThumbnailAnnotation */; };
@@ -46,6 +48,8 @@
 		0C61AAFCD625F3BA034B93FA /* Pods_Nudmor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nudmor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903923F48A2960CBE03B0D86 /* Pods-Nudmor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudmor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nudmor/Pods-Nudmor.release.xcconfig"; sourceTree = "<group>"; };
 		A3CA01A92FC48A9E71065FE7 /* Pods-Nudmor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nudmor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nudmor/Pods-Nudmor.debug.xcconfig"; sourceTree = "<group>"; };
+		C637BA821E246AED009ADBD4 /* 2_landing_page_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2_landing_page_background.png; path = Resources/2_landing_page_background.png; sourceTree = "<group>"; };
+		C637BA831E246AED009ADBD4 /* 6_finish_page_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6_finish_page_background.png; path = Resources/6_finish_page_background.png; sourceTree = "<group>"; };
 		C64F5E941D7A91A800D69DE9 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		C64F5E951D7A91A800D69DE9 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		C64F5E971D7D005A00D69DE9 /* UserLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationManager.h; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 		C67E1F471DEF0AB6009E6DA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C637BA821E246AED009ADBD4 /* 2_landing_page_background.png */,
+				C637BA831E246AED009ADBD4 /* 6_finish_page_background.png */,
 				C67E1F481DEF0AEA009E6DA6 /* SukhumvitSet.ttc */,
 			);
 			name = Resources;
@@ -313,7 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C637BA851E246AED009ADBD4 /* 6_finish_page_background.png in Resources */,
 				C67E1F491DEF0AEA009E6DA6 /* SukhumvitSet.ttc in Resources */,
+				C637BA841E246AED009ADBD4 /* 2_landing_page_background.png in Resources */,
 				C66108921D61A22F00F6DB6E /* LaunchScreen.storyboard in Resources */,
 				C64F5E9B1D8EF40000D69DE9 /* JPSThumbnailAnnotation in Resources */,
 				C661088F1D61A22F00F6DB6E /* Assets.xcassets in Resources */,

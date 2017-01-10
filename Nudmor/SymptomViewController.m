@@ -32,7 +32,7 @@
     //items = [NSArray arrayWithObjects:@"Common Symptoms", @"Headache", @"Common cold", @"Sore throat", @"Fever", @"Cough", @"Dizziness", @"Diarrhea", @"Chest pain", @"Earache", @"Skin rashes", @"Hip pain", @"Knee pain", @"Low back pain", @"Neck pain", nil];
     symptomNames = [[NSMutableArray alloc] init];
     symptomIds = [[NSMutableArray alloc] init];
-    [symptomNames addObject:@"Common Symptoms"];
+    [symptomNames addObject:@"อาการที่พบบ่อย"];
     
     APIManager *apiManager = [[APIManager alloc] init];
     
@@ -48,15 +48,26 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SymptomHeaderCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    cell.textLabel.text = [symptomNames objectAtIndex:indexPath.row];
+    UITableViewCell *cell;
     
     if(indexPath.row == 0)
     {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"SymptomHeaderCell" forIndexPath:indexPath];
+        
+        // Configure the cell...
+        
+        cell.textLabel.text = [symptomNames objectAtIndex:indexPath.row];
+        
         cell.textLabel.font = [UIFont boldSystemFontOfSize:24.0];
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"SymptomRowCell" forIndexPath:indexPath];
+        
+        // Configure the cell...
+        
+        cell.textLabel.text = [symptomNames objectAtIndex:indexPath.row];
     }
     
     return cell;
